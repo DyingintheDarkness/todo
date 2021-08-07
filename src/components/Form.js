@@ -1,6 +1,7 @@
 import React from "react";
 import "boxicons";
 import uniqid from "uniqid";
+import "./Form.css";
 
 const monthNames = [
   "January",
@@ -26,27 +27,33 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { text: inputText, date: today, completed: false, id: uniqid() },
-    ]);
-    setInputText("");
+    if (inputText !== "") {
+      setTodos([
+        ...todos,
+        { text: inputText, date: today, completed: false, id: uniqid() },
+      ]);
+      setInputText("");
+    }
   };
 
   return (
-    <>
-      <form>
+    <div className="form-container">
+      <div className="input-container">
         <input
           onChange={inputTextHandler}
           value={inputText}
           type="text"
-          className="todo-input"
+          placeholder="Add New Task..."
         />
-        <button type="submit" onClick={submitHandler}>
-          <box-icon type="solid" name="add-to-queue"></box-icon>
+        <button type="submit" class="btn-submit" onClick={submitHandler}>
+          <box-icon
+            type="solid"
+            name="add-to-queue"
+            className="add-todo"
+          ></box-icon>
         </button>
-      </form>
-    </>
+      </div>
+    </div>
   );
 };
 

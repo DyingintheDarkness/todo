@@ -1,0 +1,67 @@
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 3rem;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+}
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-self: center;
+  border-radius: 10px;
+  width: 50%;
+  height: 3rem;
+  background: #fff;
+  overflow: hidden;
+}
+.todo-item * {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.todo-item .text-container {
+  width: 29%;
+}
+.todo-item .text-container p {
+  padding-left: 0.2rem;
+}
+.todo-item .date-container {
+  width: 30%;
+  padding-left: 0.5rem;
+  background: #e0e0e0;
+  border-radius: 10px 0 0 10px;
+}
+.todo-item .date-container h1 {
+  font-weight: 100;
+  padding-right: 0.3rem;
+}
+.todo-item .btn-container {
+  width: 30%;
+  margin-left: auto;
+}
+.todo-item .btn-container button {
+  font-size: var(--icon-fz);
+  height: 100%;
+  width: 50%;
+  outline: none;
+  border-top: none;
+  border-bottom: none;
+  align-content: center;
+  justify-content: center;
+}
+.btn-check {
+  background: #00ff38;
+  border-left: 2px solid black;
+}
+.btn-check:disabled {
+  background: #88ffaa;
+}
+.btn-x {
+  background: #ff0000;
+  border-left: 2px solid black;
+  border-right: none;
+}

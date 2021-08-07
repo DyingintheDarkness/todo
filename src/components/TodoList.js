@@ -1,10 +1,11 @@
 import React from "react";
+import "./TodoList.css";
 const TodoItem = ({ todo, setTodos, todos }) => {
   const { text, date, completed, id } = todo;
   const removeTodo = () => {
     setTodos(todos.filter((el) => el.id !== id));
   };
-  const completeHandler = () => {
+  const completeHandler = (e) => {
     setTodos(
       todos.map((item) => {
         if (item.id === id) {
@@ -16,20 +17,25 @@ const TodoItem = ({ todo, setTodos, todos }) => {
         return item;
       })
     );
-    console.log(completed);
   };
   return (
     <div className="todo-item">
-      <div className="date-time">{date}</div>
-      <div className="text-container">
-        {text}
-        {completed ? " I am true" : "I am false"}
+      <div className="date-container">
+        <h2>{date}</h2>
       </div>
+      <div className="text-container">
+        <p>{text}</p>
+      </div>
+
       <div className="btn-container">
-        <button className="check">
-          <box-icon name="check" onClick={() => completeHandler()}></box-icon>
+        <button
+          className="btn-check"
+          disabled={completed}
+          onClick={(e) => completeHandler(e)}
+        >
+          <box-icon name="check"></box-icon>
         </button>
-        <button className="cross" onClick={() => removeTodo()}>
+        <button className="btn-x" onClick={() => removeTodo()}>
           <box-icon name="x"></box-icon>
         </button>
       </div>
@@ -39,7 +45,7 @@ const TodoItem = ({ todo, setTodos, todos }) => {
 
 const TodoList = ({ todos, setTodos }) => {
   return (
-    <>
+    <div className="todo-container">
       {todos.map((todo) => {
         return (
           <TodoItem
@@ -50,7 +56,7 @@ const TodoList = ({ todos, setTodos }) => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 
