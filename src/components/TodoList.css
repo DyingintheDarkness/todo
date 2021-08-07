@@ -6,6 +6,8 @@
   gap: 1rem;
   width: 100%;
   padding: 1rem 0 1rem 0;
+  justify-content: center;
+  align-content: center;
 }
 .todo-item {
   display: flex;
@@ -13,7 +15,7 @@
   align-content: center;
   align-self: center;
   border-radius: 10px;
-  width: 50%;
+  width: calc(var(--input-width) - 10%);
   height: 3rem;
   background: #fff;
   overflow: hidden;
@@ -34,6 +36,8 @@
   padding-left: 0.5rem;
   background: #e0e0e0;
   border-radius: 10px 0 0 10px;
+  padding-right: 1rem;
+  white-space: nowrap;
 }
 .todo-item .date-container h1 {
   font-weight: 100;

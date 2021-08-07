@@ -10,9 +10,6 @@ section {
     --h2-fz: 1.2rem;
     --p-fz: 1rem;
   }
-  .todo-container .todo-item {
-    width: 55%;
-  }
 }
 @media (max-width: 800px) {
   :root {
@@ -27,69 +24,58 @@ section {
   :root {
     --icon-fz: 2rem;
     --h1-fz: 1.5rem;
-    --h2-fz: 0.7rem;
-    --p-fz: 0.689rem;
+    --h2-fz: 1rem;
+    --p-fz: 1rem;
   }
   p {
     font-weight: 500;
   }
-  .todo-container .todo-item {
-    width: 70%;
-    height: 2rem;
-    margin-left: -8rem;
-  }
+
   .form-container input {
     width: 75%;
   }
-  .input-container {
-    left: 2%;
+  .todo-container .todo-item {
+    height: 2rem;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   :root {
     --icon-fz: 2rem;
     --h1-fz: 1.5rem;
     --h2-fz: 0.7rem;
     --p-fz: 0.65rem;
   }
-  .todo-container .todo-item {
-    width: 75%;
-    margin-left: -5rem;
-  }
-  .form-container input {
-    width: 77%;
-    height: 2rem;
-  }
-  .input-container {
-    left: 0.5%;
-  }
   .todo-item .btn-container button {
     width: 55%;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   :root {
     --icon-fz: 1.5rem;
     --h1-fz: 1.5rem;
     --h2-fz: 0.6rem;
   }
-  .todo-container .todo-item {
-    width: 70%;
-    margin-left: -4rem;
-  }
   .form-container input {
     width: 76%;
-    height: 2rem;
-    margin-left: -0.5rem;
     font-size: 0.8rem;
     height: 1.5rem;
+    margin-left: 1rem;
+  }
+  .form-container input,
+  ::placeholder {
+    font-size: 1rem;
   }
   .todo-item .btn-container button {
     width: 50%;
   }
-  .input-container {
-    left: 5%;
+  .todo-container .todo-item {
+    width: 70%;
+    margin-top: -2rem;
+    margin-left: -1rem;
+  }
+  .form-container button {
+    top: -1.2rem;
   }
 }
 
@@ -97,14 +83,8 @@ section {
   :root {
     --icon-fz: 1.5rem;
     --h1-fz: 1.5rem;
-    --h2-fz: 0.4rem;
+    --h2-fz: 0.65rem;
     --p-fz: 0.6rem;
-  }
-  .todo-container .todo-item {
-    width: 75%;
-    margin-left: -3rem;
-    margin-top: -2rem;
-    height: 1.5rem;
   }
 
   .form-container input {
@@ -112,8 +92,5 @@ section {
   }
   .todo-item .btn-container button {
     width: 50%;
-  }
-  .input-container {
-    left: 3%;
   }
 }
