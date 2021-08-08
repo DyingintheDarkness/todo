@@ -1,10 +1,13 @@
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 import Header from "./components/Header";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
+   useEffect(() => {
+    document.title = "Simple React TOOD"
+  }, [])
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   return (
