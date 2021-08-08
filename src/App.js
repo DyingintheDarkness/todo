@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
    useEffect(() => {
-    document.title = "Simple React TOOD"
+    document.title = "Simple React TODO"
   }, [])
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
